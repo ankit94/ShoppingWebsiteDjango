@@ -114,7 +114,7 @@ class CheckoutView(View):
                 else:
                     messages.info(
                         self.request, "Please fill in the required billing address fields")
-                return redirect('core:home')
+                return redirect('core:checkout')
 
         except ObjectDoesNotExist:
             messages.warning(self.request, "You do not have an active order")
